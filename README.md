@@ -20,6 +20,7 @@ a sample data is
 to host it on pythonanywhere replace the wsgi.py file code with the below code
 --------------------------------------------------------------------------------------------------------------------------
 import os
+
 import sys
 
 
