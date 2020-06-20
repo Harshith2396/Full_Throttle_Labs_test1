@@ -16,4 +16,19 @@ a sample data is
 
                         {"id": "nrY9613fq", "real_name": "Alejandra Smith", "tz": "Asia/Kolkata", "activity_periods": [{"start_time": "April 19 2020 11:43 AM", "end_time": "May 03 2020 05:17 AM"}, {"start_time": "April 19 2020 11:43 AM", "end_time": "May 03 2020 05:17 AM"}, {"start_time": "April 19 2020 11:43 AM", "end_time": "May 03 2020 05:17 AM"}]}
                         ]
- }
+    }
+to host it on pythonanywhere replace the wsgi.py file code with the below code
+--------------------------------------------------------------------------------------------------------------------------
+import os
+import sys
+
+
+path = 'place the directory of project cloned from github here'# example '/home/username/Full_throttle_labs_test1'
+
+if path not in sys.path:
+     sys.path.insert(0, path)
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'FTL_test_1.settings'
+
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
